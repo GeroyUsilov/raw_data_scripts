@@ -1,8 +1,11 @@
 #!/bin/bash
 export DATADIR=/project2/amurugan/danio_rnaseq
 sample=$1
+echo "$sample filtering"
 r1_in_gz= $DATADIR/$sample/*R1*.gz 
 r2_in_gz= $DATADIR/$sample/*R2*.gz 
+echo "R1 filename zipped $r1_in_gz"
+echo "R2 filename zipped $r1_in_gz"
 gunzip $r1_in_gz
 gunzip $r2_in_gz
 r1_in= $DATADIR/$sample/*R1*.fastq
