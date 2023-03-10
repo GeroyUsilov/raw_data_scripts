@@ -9,4 +9,4 @@
 #SBATCH --mem-per-cpu=3000
 
 module load STAR/2.6.1b
-./scripts/rna_map_loop.sh $1
+./rna_map_loop.sh $1
