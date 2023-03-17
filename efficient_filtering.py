@@ -19,12 +19,14 @@ input_seq_iterator_r2 = SeqIO.parse(r2_filename, "fastq")
 
 input_seq_iterator_r1 = (records[0] for records in zip(input_seq_iterator_r1,input_seq_iterator_r2) if (np.mean(records[0].letter_annotations["phred_quality"][start_filter_pos:seq_ln]) > min_avg_score) and (np.mean(records[1].letter_annotations["phred_quality"][start_filter_pos:seq_ln]) > min_avg_score))
 
+with open(r1_output_filename, "w") as output_handle:
+    SeqIO.write(input_seq_iterator_r1, output_handle, "fastq")
+
 input_seq_iterator_r1 = SeqIO.parse(r1_filename, "fastq")
 input_seq_iterator_r2 = SeqIO.parse(r2_filename, "fastq")
 
 input_seq_iterator_r2 = (records[1] for records in zip(input_seq_iterator_r1,input_seq_iterator_r2) if (np.mean(records[0].letter_annotations["phred_quality"][start_filter_pos:seq_ln]) > min_avg_score) and (np.mean(records[1].letter_annotations["phred_quality"][start_filter_pos:seq_ln]) > min_avg_score))
 
-with open(r1_output_filename, "w") as output_handle:
-    SeqIO.write(input_seq_iterator_r1, output_handle, "fastq")
+
 with open(r2_output_filename, "w") as output_handle:
     SeqIO.write(input_seq_iterator_r2, output_handle, "fastq")
