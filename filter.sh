@@ -12,7 +12,7 @@ r1_in=($DATADIR/$sample/*R1*.fastq)
 r2_in=($DATADIR/$sample/*R2*.fastq)
 echo "${r1_in[0]}"
 echo "${r2_in[0]}"
-python filtering.py "${r1_in[0]}" "${r2_in[0]}" 30 35
+python efficient_filtering.py "${r1_in[0]}" "${r2_in[0]}" 30 35
 files_to_zip=( $DATADIR/$sample/*.fastq )
 gzip ${files_to_zip[*]}
 echo "$sample is done"
