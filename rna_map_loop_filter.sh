@@ -5,3 +5,5 @@ sample=$1
 files=( $DATADIR/$sample/*_filtered.fastq.gz )
 STAR --runThreadN 15 --outReadsUnmapped Fastx --outFileNamePrefix $DATADIR/$sample/$sample  --readFilesCommand zcat --genomeDir $GENOMEDIR --quantMode GeneCounts --readFilesIn "${files[0]}" "${files[1]}" 
 echo "$sample is done"
+samtools view -bo ${sample}Aligned.out.bam ${sample}Aligned.out.sam
+rm ${sample}Aligned.out.sam
