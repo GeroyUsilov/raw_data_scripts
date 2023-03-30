@@ -1,5 +1,5 @@
 #!/bin/bash
-sample = $1
+sample=$1
 export DATADIR=/project2/amurugan/danio_rnaseq/$sample
 export ADAPTER=$HOME/raw_data_scripts/nexterra.fa
 export INPUT_R1_zipped=$DATADIR/EJ*R1*fastq.gz
