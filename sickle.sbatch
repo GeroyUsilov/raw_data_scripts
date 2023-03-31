@@ -4,7 +4,7 @@
 #SBATCH --error=sickle_sbatch.err
 #SBATCH --account=pi-amurugan
 #SBATCH --time=00:15:00
-#SBATCH --nodes=2
+#SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem-per-cpu=3000
 
