@@ -5,8 +5,8 @@
 #SBATCH --account=pi-amurugan
 #SBATCH --time=00:15:00
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=1
-#SBATCH --mem-per-cpu=3000
+#SBATCH --ntasks-per-node=2
+#SBATCH --mem-per-cpu=1400
 
 module load sickle
 ./sickle.sh $1
