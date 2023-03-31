@@ -3,7 +3,7 @@
 #SBATCH --output=rna_map_sbatch.out
 #SBATCH --error=rna_map_sbatch.err
 #SBATCH --account=pi-amurugan
-#SBATCH --time=00:20:00
+#SBATCH --time=00:30:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=15
 #SBATCH --mem-per-cpu=3000
