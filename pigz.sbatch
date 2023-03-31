@@ -8,4 +8,4 @@
 #SBATCH --ntasks-per-node=10
 #SBATCH --mem-per-cpu=1300
 module load pigz
-./pigz.sh $1
+$HOME/raw_data_scripts/pigz.sh $1
