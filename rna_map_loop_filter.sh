@@ -7,5 +7,3 @@ STAR --runThreadN 15 --outReadsUnmapped Fastx --outFileNamePrefix $DATADIR/$samp
 echo "$sample is done"
 samtools view -bo $DATADIR/$sample/${sample}Aligned.out.bam $DATADIR/$sample/${sample}Aligned.out.sam
 rm $DATADIR/$sample/${sample}Aligned.out.sam
-mv rna_map_sbatch.err $DATADIR/$sample
-mv rna_map_sbatch.out $DATADIR/$sample
