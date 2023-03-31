@@ -3,7 +3,7 @@
 #SBATCH --output=sickle_sbatch.out
 #SBATCH --error=sickle_sbatch.err
 #SBATCH --account=pi-amurugan
-#SBATCH --time=00:15:00
+#SBATCH --time=00:25:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=2
 #SBATCH --mem-per-cpu=1400
