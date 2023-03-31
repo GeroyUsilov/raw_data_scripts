@@ -1,0 +1,11 @@
+#!/bin/bash
+#SBATCH --job-name=pigz
+#SBATCH --output=pigz.out
+#SBATCH --error=pigz.err
+#SBATCH --account=pi-ejerison
+#SBATCH --time=00:15:00
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=10
+#SBATCH --mem-per-cpu=1300
+module load pigz
+./pigz.sh $1
