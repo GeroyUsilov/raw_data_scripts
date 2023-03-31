@@ -10,4 +10,4 @@
 
 module load STAR/2.6.1b
 module load samtools
-./rna_map_loop_filter.sh $1
+./rna_map_loop_filter.sh $1 &> /project2/amurugan/danio_rnaseq/$1/star_results.txt
