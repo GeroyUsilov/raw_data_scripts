@@ -8,4 +8,4 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem-per-cpu=4000
 
-./scythe_nozip.sh $1
+./scythe.sh $1
