@@ -7,8 +7,8 @@ print(sys.argv)
 output_dir = sys.argv[5]
 r1_filename = sys.argv[1]
 r2_filename = sys.argv[2]
-r1_output_filename = output_dir + "r1" + '_nosedive_filtered' + '.fastq' 
-r2_output_filename = output_dir +  "r2" + '_nosedive_filtered' + '.fastq' 
+r1_output_filename = output_dir + "/r1" + '_nosedive_filtered' + '.fastq' 
+r2_output_filename = output_dir +  "/r2" + '_nosedive_filtered' + '.fastq' 
 seq_ln = 100
 n_seqs = count_seqs(r1_filename)
 print(r1_filename)
