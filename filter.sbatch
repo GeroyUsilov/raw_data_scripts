@@ -9,6 +9,5 @@
 #SBATCH --mem-per-cpu=10000
 
 module load python
-module load pigz
 
 ./filter.sh $1
